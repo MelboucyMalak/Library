@@ -1,9 +1,6 @@
 const myLibrary = [];
 const booksContainer=document.querySelector(".books-container")
 
-
- 
-
 function Book(title, author, pages, read) {
     this.title=title
     this.author=author
@@ -45,9 +42,44 @@ const book4 = {
     read: false
 };
 
-let defaultBooks=[book1,book2,book3,book4]
+const book5 = {
+    title: "Letter from an Unknown Woman",
+    author: "Stefan Zweig",
+    pages: 72,
+    read: false
+};
 
-for(let i=0;i<4;i++){
+const book6 = {
+    title: "Letter from an Unknown Woman",
+    author: "Stefan Zweig",
+    pages: 72,
+    read: false
+};
+
+const book7 = {
+    title: "Letter from an Unknown Woman",
+    author: "Stefan Zweig",
+    pages: 72,
+    read: false
+};
+
+const book9 = {
+    title: "Letter from an Unknown Woman",
+    author: "Stefan Zweig",
+    pages: 72,
+    read: false
+};
+
+const book10 = {
+    title: "Letter from an Unknown Woman",
+    author: "Stefan Zweig",
+    pages: 72,
+    read: false
+};
+
+let defaultBooks=[book1,book2,book3,book4,book5,book6,book7,book9,book10]
+
+for(let i=0;i<9;i++){
     addBookToLibrary(defaultBooks[i])
     console.log(myLibrary[i])
 }

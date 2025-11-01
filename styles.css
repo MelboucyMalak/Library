@@ -1,43 +1,262 @@
+
+
 body,html{
     height: 100%;
+    background-color: rgb(221, 187, 187);
+}
+.container{
+    display: grid;
+    grid-template-columns: 275px auto;
+    height: 100%;
+     
 }
 
 *{
     padding: 0;
     margin: 0;
+    font-family: "Momo Trust Display", sans-serif;
+    
+     
 }
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 50px;
+    padding-right: 40px;
+    gap: 40px;
+    grid-area: 1/1/-1/2;
+    background: linear-gradient(to bottom,rgb(252, 252, 252),rgb(221, 187, 187) );
+    color: rgb(167, 163, 163);
+}
+
+.logo{
+    font-size: 1.1rem;
+    padding-top: 30px;
+    color: black;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    gap: 10px;  
+    font-size: 0.8rem;
+}
+
+.item{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    
+}
+
+.item .icon{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(241, 238, 238);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+     
+}
+
+
+main{
+    position: relative;
+    display: grid;
+    grid-template-rows: 250px auto;
+    grid-area: 1/2/-1/-1;
+    color: white;
+}
+
+.right-layer, .left-layer{
+    position: absolute;
+    top: 0;
+    height: 450px;
+    z-index: 1;
+}
+
+.library, header{
+    z-index: 2;
+}
+
+.operations button{
+    border: none;
+}
+
+.right-layer{
+    right: 0;
+    width: 30%;
+    background-color: rgb(122, 50, 50);
+}
+
+.left-layer{
+    left: 0;
+    width: 70%;
+    background-color: rgb(85, 22, 22);
+    border-bottom-left-radius: 50px;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    grid-area: 1/1/2/-1;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    margin: 70px auto auto 70px;
+    height: 40%;
+    width: 60%;
+}
+
+.search .text{
+    justify-self: start;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    flex: 1.25;
+}
+
+.search .search-bar{
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    padding: 8px 16px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+     
+}
+
+.search-bar input{
+    outline: none;
+    border: none;
+    height: 100%;
+    padding: 6px;
+    flex:3;
+}
+
+.search-bar button{
+    border: none;
+    padding: 8px 16px;
+    flex:1;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(5, 48, 30);
+    color: white;
+}
+
+
+.account{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 100%;
+    padding-top: 30px;
+}
+
+.account .profile{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.75rem;
+}
+
+.pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    aspect-ratio:1/1;
+    background: url(image/profilePic.jpeg) no-repeat center/contain;
+}
+
+ 
+ 
+
+.library .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 70px;
+    margin-left:70px ;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.operations{
+    width: 70px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+     
+     
+}
+
+.operations button{
+    background-color: white
+}
+
+
+
 .books-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: 250px;
-    gap: 16px;
-    background-color: antiquewhite;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 40px;
+    padding: 25px 70px;
+    grid-area: 2/2/3/3;
+    z-index: 2;
+     
 }
 
 .card{
-    background-color: rgb(190, 172, 207);
+    
     display: grid;
     grid-template-rows: 4fr 1fr;
     gap: 8px;
+    height: 350px;
+     
+    border-radius: 12.5px;
+    
 }
 
 .book{
-    background-color: aquamarine;
+    background-color: rgb(49, 9, 9);
     display: grid;
     grid-template: 4fr 1fr/1fr;
     gap:8px;
+    border-radius: 12.5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px gray;
 }
 
 .title-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(199, 199, 220);
+     
 }
 
 .book .title{
     text-align: center;
-    background-color:rgb(182, 219, 176);
     -webkit-line-clamp: 4;  
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -45,24 +264,27 @@ body,html{
     -webkit-user-drag: 100%;
     text-overflow: ellipsis;
     font-size: clamp(0.9rem,2vw,2rem) ;
+    color: white;
 }
 
 .book .author{
-    background-color:rgb(163, 194, 158); 
+    
     justify-self: end;
     display: flex;
     align-items: end;
+    margin: auto 5px 5px auto;
+    color: white;
 }
 
 .book-meta{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 6px;
 }
 
 .pages{
-    background-color: rgb(193, 166, 166);
+     
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,10 +293,39 @@ body,html{
 .book-icon  {
     height: 20px;
     width: 20px;
+    fill: rgb(37, 35, 35);  ;
 }
 
 .read-state{
     height: 20px;
     width: 20px;
-    background-color: rgb(214, 179, 179);  
+    fill: rgb(24, 77, 11);  
 }
+
+.icon{
+    height: 20px;
+    width: 20px;
+}
+svg{
+    height: 20px;
+    width: 20px;
+}
+
+.menu svg, .operations svg, .menu {
+    fill: rgb(29, 6, 6);
+    color: rgb(29, 6, 6); ;
+}
+
+.account svg{
+    fill: white;
+}
+
+.book-meta svg{
+    height: 18px;
+}
+
+.book-icon, .pages{
+    fill: rgb(12, 5, 5);
+    color:rgb(12, 5, 5);
+}
+
